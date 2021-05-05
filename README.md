@@ -19,12 +19,21 @@ O projeto está estruturado de seguinte forma:
 - Camada Entities (iti-domain): contem objetos de domínio, contratos de serviços.
 - Camada Use cases (iti-application): contem objetos que representam regras de negócio.
 - Camada Interface Adapters (iti-api): contem objetos responsáveis por realizar a comunicação com componentes externos.
-- Camada Frameworks & Drivers (iti-web): camada composta de frameworks
 
-## Instruções de execução do projeto;
+## Instruções de execução do projeto
 
- > cd iti-parent
+Requisitos jdk 11 + maven
+
+Após clone executar os seguintes comandos:
+
+ > cd code-challenge-iti-digital/iti-parent/
  
  > mvn clean install
  
- > java -jar iti-web/target/xxxxx
+ > java -jar iti-api/target/iti-api-0.0.1-SNAPSHOT.jar
+
+ > curl -X POST "http://localhost:8080/credential" -H "Content-Type: application/json" -d "{ \"password\": \"AbTp9#fok\"}"
+
+ Uma documentação da API estará disponível em:
+
+ > http://localhost:8080/swagger-ui.html
